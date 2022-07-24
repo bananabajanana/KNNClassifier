@@ -1,3 +1,0 @@
-C:/Users/ohadh/CLionProjects/KNNClassifier/cmake-build-debug/CMakeFiles/KNNClassifier.dir
-C:/Users/ohadh/CLionProjects/KNNClassifier/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/ohadh/CLionProjects/KNNClassifier/cmake-build-debug/CMakeFiles/rebuild_cache.dir
