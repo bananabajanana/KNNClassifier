@@ -1,7 +1,7 @@
 #include "Point.hpp"
 
 Point::Point(double sepalWidth, double sepalLength, double petalWidth, double petalLength)
-    :this->sepalWidth(sepalWidth), this->sepalLength(sepalLength), this->petalWidth(petalWidth), this->petalLength(petalLength)
+    :this->sepalWidth(sepalWidth): this->sepalLength(sepalLength): this->petalWidth(petalWidth): this->petalLength(petalLength)
 {
 }
 
