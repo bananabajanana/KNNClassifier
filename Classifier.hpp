@@ -6,8 +6,7 @@ class Classifier {
 private:
     const int k;
     std::vector<Flower> classified;
-    std::vector<Flower> unclassified;
+    typeIris defFlower(Flower f);
 public:
-    std::vector<Flower> defFlowers(std::vector<Flower> classified, std::vector<Flower>& unclassified, typeOfDistance typeDis);
-    typeIris defFlower(Flower f, std::vector<Flower> classified);
+    std::vector<Flower> defFlowers(std::vector<Flower>& unclassified, typeOfDistance typeDis);
 };

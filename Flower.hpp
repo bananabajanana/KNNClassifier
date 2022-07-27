@@ -9,6 +9,6 @@ private:
 public:
     void setType(typeIris iris);
     Point getPoint();
-    double getTypeOfIris();
+    typeIris getTypeOfIris();
 
 };

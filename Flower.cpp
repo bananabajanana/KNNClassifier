@@ -3,7 +3,7 @@
 void Flower::setType(typeIris iris) {
     this.type = iris;
 }
-double Flower::getTypeOfIris() {
+typeIris Flower::getTypeOfIris() {
     return type;
 }
 Point Flower::getPoint() {
