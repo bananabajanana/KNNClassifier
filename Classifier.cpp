@@ -6,17 +6,17 @@ Classifier::Classifier(int k, std::vector<Flower> classified) :this->k(k) {
         //prob
 }
 
-void Classifier::defFlowers(std::vector<Flower>& unclassified, typeOfDistance typeDis) {
+void Classifier::defFlowers(std::vector<Flower>& unclassified, DistanceCalc typeDis) {
     for(int i; i<unclassified.size();i++) {
         defFlower(unclassified[i],typeDis);
     }
 }
-void Classifier::defFlower(Flower& f, typeOfDistance typeDis) {
+void Classifier::defFlower(Flower& f, DistanceCalc calculator) {
     std::vector<double> distances;
     std::vector<Flower> results;
     //going to change
     for(int i=0;i<classified.size();i++) {
-        distances.push_back(Distance::getDistance(f.getPoint(),classified[i].getPoint(), typeDis));
+        distances.push_back(calculator.dist(f.getPoint(), classified[i].getPoint()));
     }
     //changed(my mind)
     for(int i=0;i<k;i++) {
