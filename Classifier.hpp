@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "Flower.hpp"
-#include "Distance.hpp"
+#include "DistanceCalc.hpp"
 class Classifier {
 private:
     const int k;
