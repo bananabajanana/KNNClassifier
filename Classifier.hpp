@@ -9,5 +9,5 @@ private:
     void defFlower(Flower& f, typeOfDistance typeDis);
     int Classifier::whereMinInArr(std::vector<double>& distances);
 public:
-    std::vector<Flower> defFlowers(std::vector<Flower>& unclassified, typeOfDistance typeDis);
+    void defFlowers(std::vector<Flower>& unclassified, typeOfDistance typeDis);
 };

@@ -2,7 +2,11 @@
 #include "Distance.hpp"
 #define MAX_NUM 99999999
 
-std::vector<Flower> Classifier::defFlowers(std::vector<Flower>& unclassified, typeOfDistance typeDis) {
+Classifier::Classifier(int k, std::vector<Flower> classified) :this->k(k) {
+        //prob
+}
+
+void Classifier::defFlowers(std::vector<Flower>& unclassified, typeOfDistance typeDis) {
     for(int i; i<unclassified.size();i++) {
         defFlower(unclassified[i],typeDis);
     }
