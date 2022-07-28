@@ -1,16 +1,18 @@
 #include "Classifier.hpp"
 
 
-Classifier::Classifier(int k, std::vector<Flower> classified) :k(k) {
-        //prob
+Classifier::Classifier(int k, const std::vector<Flower>& classified) :k(k) {
+    for(auto& flower:classified) {
+            this->classified.push_back(flower);
+    }
 }
 
-void Classifier::defFlowers(std::vector<Flower>& unclassified, DistanceCalc typeDis) {
+void Classifier::defFlowers(std::vector<Flower>& unclassified, DistanceCalc& typeDis) {
     for(int i; i<unclassified.size();i++) {
         defFlower(unclassified[i], typeDis);
     }
 }
-void Classifier::defFlower(Flower& f, DistanceCalc calculator) {
+void Classifier::defFlower(Flower& f, DistanceCalc& calculator) {
     std::vector<double> distances;
     std::vector<Flower> results;
     //going to change

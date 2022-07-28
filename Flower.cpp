@@ -9,6 +9,7 @@ typeIris Flower::getTypeOfIris() {
 Point Flower::getPoint() {
     return character;
 }
+//מקווה שלא יתפוצץ
 Flower::Flower(double sepalWidth, double sepalLength, double petalWidth, double petalLength, typeIris type)
     :character(sepalWidth, sepalLength, petalWidth, petalLength)
 {

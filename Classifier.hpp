@@ -3,7 +3,7 @@
 #include <cmath>
 #include "Flower.hpp"
 #include "DistanceCalc.hpp"
-#define MAX_NUM 99999999
+#define MAX_NUM 1.7976931348623157E+308
 class Classifier {
 private:
     const int k;
@@ -13,7 +13,7 @@ private:
      * @param f - The flower.
      * @param typeDis - The distance method we are going to use.
      */
-    void defFlower(Flower& f, DistanceCalc typeDis);
+    void defFlower(Flower& f, DistanceCalc& typeDis);
 
     /**
      * Helps the "defFlower" function algorithm finding the closest iris
@@ -29,12 +29,12 @@ public:
      * @param unclassified - all the unclassified flowers.
      * @param typeDis - whe distance method we use.
      */
-    void defFlowers(std::vector<Flower>& unclassified, DistanceCalc typeDis);
+    void defFlowers(std::vector<Flower>& unclassified, DistanceCalc& typeDis);
 
     /**
      * Creat classifier for merging unclassified.
      * @param k - the amount of iris that we are using.
      * @param classified - the flowers we use.
      */
-    Classifier(int k, std::vector<Flower> classified);
+    Classifier(int k, const std::vector<Flower>& classified);
 };
