@@ -48,13 +48,13 @@ Flower& FileConverter::flowerFromLine(char *st) {
         parameters[i] = std::stof(val);
         val = strtok(nullptr, ",");
     }
-    Flower output = new Flower(parameters[0], parameters[1], parameters[2], parameters[3]);
+    Flower* output = new Flower(parameters[0], parameters[1], parameters[2], parameters[3]);
     if (val == "Iris-setosa") {
-        output.setType(setosa);
+        output->setType(setosa);
     } else if (val == "Iris-versicolor") {
-        output.setType(versicolor);
+        output->setType(versicolor);
     } else if (val == "Iris-virginica") {
-        output.setType(virginica);
+        output->setType(virginica);
     }
     return output;
 }
