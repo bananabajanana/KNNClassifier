@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 
 #include "Flower.hpp"
@@ -9,8 +8,8 @@
 
 int main(int argc, char*argv[]) {
     FileConverter fc;
-    std::vector<Flower> classified = fc.updateFromFile("source/classified.csv");
-    std::vector<Flower> unclassified = fc.updateFromFile("source/Unclassified.csv");
+    std::vector<Flower> classified = fc.updateFromFile("C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\source\\classified.csv");
+    std::vector<Flower> unclassified = fc.updateFromFile("C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\source\\Unclassified.csv");
     int k = atoi(argv[0]);
 
     Classifier machine(k, classified);
@@ -20,6 +19,7 @@ int main(int argc, char*argv[]) {
         std::vector<Flower> output = unclassified;
         machine.defFlowers(output, *calculator);
         fc.setContent(output);
-        fc.updateToFile(calculator->fileName());
+        std::string path = calculator->fileName();
+        fc.updateToFile(path);
     }
 }

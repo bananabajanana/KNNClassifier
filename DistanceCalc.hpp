@@ -7,8 +7,8 @@
 #include "FourDPoint.hpp"
 
 class DistanceCalc {
-    private:
-        const std::string FILE_NAME;
+protected:
+        std::string FILE_NAME;
     public:
 
         /**

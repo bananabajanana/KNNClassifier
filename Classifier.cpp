@@ -36,7 +36,7 @@ void Classifier::defFlower(Flower& f, DistanceCalc& calculator) {
         f.setType(virginica);
     }
 
-    if(types[1]==fmax(types[0],(int)fmax(types[1],types[2]))) {
+    if(types[2]==fmax(types[0],(int)fmax(types[1],types[2]))) {
         f.setType(setosa);
     }
 

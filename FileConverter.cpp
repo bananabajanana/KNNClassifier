@@ -10,9 +10,9 @@ std::vector<Flower> &FileConverter::getContent() {
     return this->content;
 }
 
-void FileConverter::setContent(std::vector<Flower> &content) {
+void FileConverter::setContent(std::vector<Flower> &newContent) {
     content.clear();
-    for(auto& flower : content) {
+    for(Flower& flower : newContent) {
         this->content.push_back(flower);
     }
 }
@@ -31,39 +31,42 @@ std::vector<Flower>& FileConverter::updateFromFile(std::string path) {
 void FileConverter::updateToFile(std::string path) {
     std::ofstream file(path);
     for (auto& flower : content) {
-        file << flower.getTypeOfIris() << std::endl;
-    }
-}
-
-std::ostream& operator<<(std::ostream& os, const typeIris &typeIris) {
-    switch (typeIris) {
-        case versicolor:
-            return os << "Iris-versicolor";
-        case virginica:
-            return os << "Iris-virginica";
-        case setosa:
-            return os << "Iris-setosa";
-        default:
-            return os << "!!Undefined!!";
+        switch (flower.getTypeOfIris()) {
+            case versicolor:
+                file << "Iris-versicolor" << std::endl;
+                break;
+            case virginica:
+                file << "Iris-virginica" << std::endl;
+                break;
+            case setosa:
+                file << "Iris-setosa" << std::endl;
+                break;
+            default:
+                file << "!!Undefined!!" << std::endl;
+                break;
+        }
     }
 }
 
 //for the specific input type "num,num,num,num,type"
 Flower& FileConverter::flowerFromLine(char *st) {
     char * val;
-    int parameters[4];
+    double parameters[4];
     val = strtok(st, ",");
     for(int i = 0; i < 4; i++) {
-        parameters[i] = std::stof(val);
+        parameters[i] = std::stod(val);
         val = strtok(nullptr, ",");
     }
     Flower* output = new Flower(parameters[0], parameters[1], parameters[2], parameters[3]);
-    if (val == "Iris-setosa") {
-        output->setType(setosa);
-    } else if (val == "Iris-versicolor") {
-        output->setType(versicolor);
-    } else if (val == "Iris-virginica") {
-        output->setType(virginica);
+    if (val != nullptr) {
+        std::string temp(val);
+        if (temp == "Iris-setosa") {
+            output->setType(setosa);
+        } else if (temp == "Iris-versicolor") {
+            output->setType(versicolor);
+        } else if (temp == "Iris-virginica") {
+            output->setType(virginica);
+        }
     }
     return *output;
 }
