@@ -1,14 +1,14 @@
 #include "Classifier.hpp"
-#include "Distance.hpp"
+#include "DistanceCalc.hpp"
 #define MAX_NUM 99999999
 
-Classifier::Classifier(int k, std::vector<Flower> classified) :this->k(k) {
+Classifier::Classifier(int k, std::vector<Flower> classified) :k(k) {
         //prob
 }
 
 void Classifier::defFlowers(std::vector<Flower>& unclassified, DistanceCalc typeDis) {
     for(int i; i<unclassified.size();i++) {
-        defFlower(unclassified[i],typeDis);
+        defFlower(unclassified[i], typeDis);
     }
 }
 void Classifier::defFlower(Flower& f, DistanceCalc calculator) {
@@ -27,7 +27,17 @@ void Classifier::defFlower(Flower& f, DistanceCalc calculator) {
     for(int i=0;i<k;i++) {
         types[results[i].getTypeOfIris()]++;
     }
-    f.setType(max(types[0],max(types[1],types[2])));
+    //versicolor, virginica, setosa, undifined};
+    if(types[0]==fmax(types[0],(int)fmax(types[1],types[2]))) {
+        f.setType(versicolor);
+    }
+    if(types[1]==fmax(types[0],(int)fmax(types[1],types[2]))) {
+        f.setType(virginica);
+    }
+
+    if(types[1]==fmax(types[0],(int)fmax(types[1],types[2]))) {
+        f.setType(setosa);
+    }
 
 }
 
