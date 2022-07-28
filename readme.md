@@ -38,6 +38,15 @@ $ ./KNNClassifier {k}
 ----
 
 ## Implementation
-Left as an exercise for the reader.
+We created a Flower object that will define each iris. Every flower has its type - there are 3 types of irises and an undifined type. 
+We created an enum in order to control the types that iris can have. In addition each flower has its own point in the coordinate System, 
+characterised by its own characteristics. In order to make it - We created the FourDPoint.
+Now, after characterizing the objects we made the Distances classes - now Ohad will write things.
+For the algorithm of merging the undefined flowers we created the Classifier class.
+The Classifier class uses defined flowers (flowers that we know their type) and our k number.
+Each time we use one undefined flower and we measure its distance from all the defined flowers.
+Than, we search the min distance k times. 
+By that we find the k closes flowers and than we can check and find the undifined flower's type.
+how we write and read its you ohad its you.
 
 [1]: https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
