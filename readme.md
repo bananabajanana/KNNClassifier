@@ -13,6 +13,16 @@
 
 ----
 
+## Installation
+
+<p>Clone the repository:</p>
+
+```console
+$ git clone 'https://github.com/bananabajanana/KNNClassifier.git'
+```
+
+----
+
 ## Usage
 <p>You can run the project using our provided <code>CMakeLists.txt</code> file:</p>
 
@@ -27,5 +37,7 @@ $ ./KNNClassifier {k}
 
 ----
 
+## Implementation
+Left as an exercise for the reader.
 
 [1]: https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
