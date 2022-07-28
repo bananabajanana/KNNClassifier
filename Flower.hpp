@@ -10,5 +10,5 @@ public:
     void setType(typeIris iris);
     Point getPoint();
     typeIris getTypeOfIris();
-
+    Flower(double sepalWidth, double sepalLength, double petalWidth, double petalLength, typeIris type);
 };

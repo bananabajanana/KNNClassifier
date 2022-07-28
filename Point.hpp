@@ -7,5 +7,5 @@ public:
     double getY();
     double getZ();
     double getW();
-
+    Point(double sepalWidth, double sepalLength, double petalWidth, double petalLength);
 };
