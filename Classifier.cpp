@@ -1,6 +1,5 @@
 #include "Classifier.hpp"
-#include "DistanceCalc.hpp"
-#define MAX_NUM 99999999
+
 
 Classifier::Classifier(int k, std::vector<Flower> classified) :k(k) {
         //prob
@@ -15,8 +14,8 @@ void Classifier::defFlower(Flower& f, DistanceCalc calculator) {
     std::vector<double> distances;
     std::vector<Flower> results;
     //going to change
-    for(int i=0;i<classified.size();i++) {
-        distances.push_back(calculator.dist(f.getPoint(), classified[i].getPoint()));
+    for(auto & i : classified) {
+        distances.push_back(calculator.dist(f.getPoint(), i.getPoint()));
     }
     //changed(my mind)
     for(int i=0;i<k;i++) {
@@ -44,9 +43,9 @@ void Classifier::defFlower(Flower& f, DistanceCalc calculator) {
 
 int Classifier::whereMinInArr(std::vector<double>& distances) {
     double min = MAX_NUM;
-    for(int i=0;i<distances.size();i++) {
-        if(min > distances[i]) {
-            min = distances[i];
+    for(double distance : distances) {
+        if(min > distance) {
+            min = distance;
         }
     }
     for(int i=0;i<distances.size();i++) {
