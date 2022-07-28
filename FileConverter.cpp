@@ -10,13 +10,22 @@ std::vector<Flower> &FileConverter::getContent() {
     return this->content;
 }
 
-void FileConverter::updateFromFile(std::string path) {
+void FileConverter::setContent(std::vector<Flower> &content) {
+    content.clear();
+    for(auto& flower : content) {
+        this->content.push_back(flower);
+    }
+}
+
+std::vector<Flower>& FileConverter::updateFromFile(std::string path) {
+    content.clear();
     std::ifstream file(path);
     std::string line;
     while (std::getline(file, line)) {
         char* info = const_cast<char *>(line.c_str());
         content.push_back(flowerFromLine(info));
     }
+    return content;
 }
 
 void FileConverter::updateToFile(std::string path) {
@@ -56,5 +65,5 @@ Flower& FileConverter::flowerFromLine(char *st) {
     } else if (val == "Iris-virginica") {
         output->setType(virginica);
     }
-    return output;
+    return *output;
 }

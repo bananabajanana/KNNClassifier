@@ -10,7 +10,8 @@ private:
 
 public:
     FileConverter();
-    void updateFromFile(std::string path);
+    std::vector<Flower>& updateFromFile(std::string path);
     void updateToFile(std::string path);
     std::vector<Flower>& getContent();
+    void setContent(std::vector<Flower>& content);
 };
