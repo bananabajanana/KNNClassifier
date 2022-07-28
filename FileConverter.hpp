@@ -1,3 +1,6 @@
+#ifndef FILE_CONVERTER_H_INCLUDED
+#define FILE_CONVERTER_H_INCLUDED
+
 #include <string>
 #include <vector>
 
@@ -9,9 +12,10 @@ private:
     Flower& flowerFromLine(char *st);
 
 public:
-    FileConverter();
     std::vector<Flower>& updateFromFile(std::string path);
     void updateToFile(std::string path);
     std::vector<Flower>& getContent();
     void setContent(std::vector<Flower>& content);
 };
+
+#endif

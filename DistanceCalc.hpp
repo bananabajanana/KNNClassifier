@@ -1,7 +1,10 @@
+#ifndef DISTANCE_H_INCLUDED
+#define DISTANCE_H_INCLUDED
+
 #include <string>
 #include <vector>
 #include <cmath>
-#include "Point.hpp"
+#include "FourDPoint.hpp"
 
 class DistanceCalc {
     private:
@@ -14,17 +17,12 @@ class DistanceCalc {
          * @param p2  - point 2.
          * @return the distance.
          */
-        virtual double dist(Point p1, Point p2) = 0;
+        virtual double dist(FourDPoint p1, FourDPoint p2) = 0;
 
         /**
          * The file name of the using system.
          * @return the file name.
          */
         std::string fileName();
-
-        /**
-         * All the types we use to measure.
-         * @return all the types that can be used.
-         */
-        static std::vector<DistanceCalc*>& getAllTypes();
 };
+#endif

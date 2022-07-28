@@ -1,4 +1,8 @@
-class Point {
+#ifndef FOURD_POINT_H_DEFINITION
+#define FOURD_POINT_H_DEFINITION
+
+
+class FourDPoint {
 private:
     const double petalLength, petalWidth, sepalLength, sepalWidth;
 
@@ -34,5 +38,7 @@ public:
      * @param petalWidth - the petal width of the iris.
      * @param petalLength - the petal length of the iris.
      */
-    Point(double sepalWidth, double sepalLength, double petalWidth, double petalLength);
+    FourDPoint(double sepalWidth, double sepalLength, double petalWidth, double petalLength);
 };
+
+#endif

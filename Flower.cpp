@@ -6,7 +6,7 @@ void Flower::setType(typeIris iris) {
 typeIris Flower::getTypeOfIris() {
     return type;
 }
-Point Flower::getPoint() {
+FourDPoint Flower::getPoint() {
     return character;
 }
 //מקווה שלא יתפוצץ

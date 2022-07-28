@@ -1,3 +1,6 @@
+#ifndef CLASSIFIER_H_INCLUDED
+#define CLASSIFIER_H_INCLUDED
+
 #include <iostream>
 #include <vector>
 #include <cmath>
@@ -38,3 +41,5 @@ public:
      */
     Classifier(int k, const std::vector<Flower>& classified);
 };
+
+#endif

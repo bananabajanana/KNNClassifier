@@ -5,15 +5,16 @@
 #include "FileConverter.hpp"
 #include "DistanceCalc.hpp"
 #include "Classifier.hpp"
+#include "DistancesData.hpp"
 
 int main(int argc, char*argv[]) {
     FileConverter fc;
-    std::vector<Flower> classified = fc.updateFromFile("classified.csv");
-    std::vector<Flower> unclassified = fc.updateFromFile("unclassified.csv");
-    int k = std::stoi(argv[0]);
+    std::vector<Flower> classified = fc.updateFromFile("source/classified.csv");
+    std::vector<Flower> unclassified = fc.updateFromFile("source/Unclassified.csv");
+    int k = atoi(argv[0]);
 
     Classifier machine(k, classified);
-    std::vector<DistanceCalc *> calculators = DistanceCalc::getAllTypes();
+    std::vector<DistanceCalc *> calculators = DistancesData::getAllTypes();
 
     for (DistanceCalc* calculator : calculators) {
         std::vector<Flower> output = unclassified;
