@@ -8,5 +8,5 @@ class DistanceCalc {
     public:
         virtual int dist(Point p1, Point p2) = 0;
         std::string fileName();
-        static std::vector<DistanceCalc> getAllTypes();
+        static std::vector<DistanceCalc*>& getAllTypes();
 };
