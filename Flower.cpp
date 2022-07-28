@@ -1,7 +1,7 @@
 #include "Flower.hpp"
 
 void Flower::setType(typeIris iris) {
-    this.type = iris;
+    type = iris;
 }
 typeIris Flower::getTypeOfIris() {
     return type;
@@ -13,4 +13,9 @@ Flower::Flower(double sepalWidth, double sepalLength, double petalWidth, double 
     :character(sepalWidth, sepalLength, petalWidth, petalLength)
 {
     this->type = type;
+}
+Flower::Flower(double sepalWidth, double sepalLength, double petalWidth, double petalLength)
+        :character(sepalWidth, sepalLength, petalWidth, petalLength)
+{
+    type = undifined;
 }

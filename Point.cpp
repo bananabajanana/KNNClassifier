@@ -5,15 +5,15 @@ Point::Point(double sepalWidth, double sepalLength, double petalWidth, double pe
 {
 }
 
-double Point::getX() {
+double Point::getX() const  {
     return petalLength;
 }
-double Point::getY() {
+double Point::getY() const {
     return petalWidth;
 }
-double Point::getZ() {
+double Point::getZ() const {
     return sepalLength;
 }
-double Point::getW() {
+double Point::getW() const {
     return sepalWidth;
 }

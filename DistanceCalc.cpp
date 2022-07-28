@@ -9,7 +9,7 @@ std::string DistanceCalc::fileName() {
 }
 
 std::vector<DistanceCalc*>& DistanceCalc::getAllTypes() {
-     std::vector<DistanceCalc*> *allTypes = new std::vector<DistanceCalc*>();
+     auto *allTypes = new std::vector<DistanceCalc*>();
      allTypes->push_back(new EuclideanDistance);
      allTypes->push_back(new ManhattanDistance);
      allTypes->push_back(new ChebyshevDistance);
