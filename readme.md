@@ -44,18 +44,18 @@ enum typeIris { versicolor, virginica, setosa, undifined };
 class Flower {
 private:
     typeIris type;
-    const FourDPoint character;
+    const NPoint character;
     ...
 };
 ```
-The FourDPoint object is the Flower's parameters, and functions as a point in a four dimensional coordinate system (for the kNN algorithm).
+The NPoint is a representation of the Flower's parameters, and functions as a point in an n-dimensional coordinate system (in 4d with the current implementation example, but can easily be expanded).
 
 Our code implements the algorithm with three different possible distance functions: Euclidean distance, Manhattan distance, and Chebyshev distance, but to allow the addition of other distance functions, we implemented generic code with an abstract distance class.
 
 ```c++
 class DistanceCalc {
 public:
-    virtual double distance(FourDPoint p1, FourDPoint p2) = 0;
+    virtual double distance(NPoint p1, NPoint p2) = 0;
     ...
 };
 ```
