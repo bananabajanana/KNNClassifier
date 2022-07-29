@@ -13,5 +13,5 @@ double ManhattanDistance::dist(NPoint p1, NPoint p2) {
 }
 
 ManhattanDistance::ManhattanDistance() {
-    this->FILE_NAME = "C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\source\\output\\manhattan_output.csv";
+    this->FILE_NAME = "C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\input\\output\\manhattan_output.csv";
 }

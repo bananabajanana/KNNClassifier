@@ -1,10 +1,10 @@
 #include <vector>
 
-#include "Flower.hpp"
-#include "FileConverter.hpp"
-#include "DistanceCalc.hpp"
-#include "Classifier.hpp"
-#include "DistancesData.hpp"
+#include "source/srcKnnClassifier/Flower.hpp"
+#include "source/srcIO/FileConverter.hpp"
+#include "source/srcDistances/DistanceCalc.hpp"
+#include "source/srcKnnClassifier/Classifier.hpp"
+#include "source/srcDistances/DistancesData.hpp"
 
 // TODO:
 //  * Change absolute paths to relative path in main and distance classes
@@ -16,8 +16,8 @@
 
 int main(int argc, char* argv[]) {
     FileConverter fc;
-    std::vector<Flower> classified = fc.updateFromFile("C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\source\\classified.csv");
-    std::vector<Flower> unclassified = fc.updateFromFile("C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\source\\Unclassified.csv");
+    std::vector<Flower> classified = fc.updateFromFile("C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\input\\classified.csv");
+    std::vector<Flower> unclassified = fc.updateFromFile("C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\input\\Unclassified.csv");
     int k = 3/*atoi(argv[0])*/;
 
     Classifier machine(k, classified);

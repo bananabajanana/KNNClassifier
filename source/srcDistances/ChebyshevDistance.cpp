@@ -11,5 +11,5 @@ double ChebyshevDistance::dist(NPoint p1, NPoint p2) {
     return sum;
 }
 ChebyshevDistance::ChebyshevDistance() {
-    this->FILE_NAME = "C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\source\\output\\chebyshev_output.csv";
+    this->FILE_NAME = "../output/chebyshev_output.csv";
 }

@@ -12,5 +12,5 @@ double EuclideanDistance::dist(NPoint p1, NPoint p2) {
 }
 
 EuclideanDistance::EuclideanDistance() {
-    this->FILE_NAME = "C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\source\\output\\euclidean_output.csv";
+    this->FILE_NAME = "C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\output\\euclidean_output.csv";
 }

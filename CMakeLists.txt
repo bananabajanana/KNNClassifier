@@ -6,22 +6,22 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(KNNClassifier
-        ChebyshevDistance.cpp
-        ChebyshevDistance.hpp
-        Classifier.cpp
-        Classifier.hpp
-        DistanceCalc.cpp
-        DistanceCalc.hpp
-        EuclideanDistance.cpp
-        EuclideanDistance.hpp
-        Flower.cpp
-        Flower.hpp
-        main.cpp
-        ManhattanDistance.cpp
-        ManhattanDistance.hpp
-        NPoint.cpp
-        NPoint.hpp
-        FileConverter.cpp
-        FileConverter.hpp
-        DistancesData.cpp
-        DistancesData.hpp)
+        source/srcDistances/ChebyshevDistance.cpp
+        source/srcDistances/ChebyshevDistance.hpp
+        source/srcKnnClassifier/Classifier.cpp
+        source/srcKnnClassifier/Classifier.hpp
+        source/srcDistances/DistanceCalc.cpp
+        source/srcDistances/DistanceCalc.hpp
+        source/srcDistances/EuclideanDistance.cpp
+        source/srcDistances/EuclideanDistance.hpp
+        source/srcKnnClassifier/Flower.cpp
+        source/srcKnnClassifier/Flower.hpp
+        source/main.cpp
+        source/srcDistances/ManhattanDistance.cpp
+        source/srcDistances/ManhattanDistance.hpp
+        source/srcKnnClassifier/NPoint.cpp
+        source/srcKnnClassifier/NPoint.hpp
+        source/srcIO/FileConverter.cpp
+        source/srcIO/FileConverter.hpp
+        source/srcDistances/DistancesData.cpp
+        source/srcDistances/DistancesData.hpp)

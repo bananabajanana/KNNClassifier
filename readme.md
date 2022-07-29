@@ -27,9 +27,7 @@ $ git clone 'https://github.com/bananabajanana/KNNClassifier.git'
 <p>You can run the project using our provided <code>CMakeLists.txt</code> file:</p>
 
 ```console
-$ mkdir build
-$ cd build
-$ cmake ..
+$ cmake
 $ make
 $ ./KNNClassifier {k}
 ```
