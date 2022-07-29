@@ -2,7 +2,7 @@
 #define FLOWER_H_DEFINITION
 
 #include "FourDPoint.hpp"
-enum typeIris { versicolor, virginica, setosa, undifined};
+enum typeIris { versicolor, virginica, setosa, undifined };
 
 class Flower {
 private:

@@ -10,9 +10,9 @@
 class DistancesData {
 public:
     /**
-         * All the types we use to measure.
-         * @return all the types that can be used.
-         */
+     * All the types we use to measure.
+     * @return all the types that can be used.
+     */
     static std::vector<DistanceCalc*>& getAllTypes();
 };
 

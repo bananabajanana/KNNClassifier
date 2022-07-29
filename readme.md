@@ -38,15 +38,52 @@ $ ./KNNClassifier {k}
 ----
 
 ## Implementation
-We created a Flower object that will define each iris. Every flower has its type - there are 3 types of irises and an undifined type. 
-We created an enum in order to control the types that iris can have. In addition each flower has its own point in the coordinate System, 
-characterised by its own characteristics. In order to make it - We created the FourDPoint.
-Now, after characterizing the objects we made the Distances classes - now Ohad will write things.
-For the algorithm of merging the undefined flowers we created the Classifier class.
-The Classifier class uses defined flowers (flowers that we know their type) and our k number.
-Each time we use one undefined flower and we measure its distance from all the defined flowers.
-Than, we search the min distance k times. 
-By that we find the k closes flowers and than we can check and find the undifined flower's type.
-how we write and read its you ohad its you.
+We first created a Flower object, that will store a single flower's type and parameters. The flower's type is stored as an enum, with four options: the three possible types, and an undefined option.
+
+```c++
+enum typeIris { versicolor, virginica, setosa, undifined };
+
+class Flower {
+private:
+    typeIris type;
+    const FourDPoint character;
+    ...
+};
+```
+The FourDPoint object is the Flower's parameters, and functions as a point in a four dimensional coordinate system (for the kNN algorithm).
+
+Our code implements the algorithm with three different possible distance functions: Euclidean distance, Manhattan distance, and Chebyshev distance, but to allow the addition of other distance functions, we implemented generic code with an abstract distance class.
+
+```c++
+class DistanceCalc {
+public:
+    virtual double distance(FourDPoint p1, FourDPoint p2) = 0;
+    ...
+};
+```
+
+In addition, to keep track of all our different types of distances implemented, we made a DistancesData builder class.
+
+```c++
+class DistancesData {
+    /**
+     * @return all the types of distance calculators that can be used.
+     */
+    static std::vector<DistanceCalc*>& getAllTypes();
+};
+```
+
+Finally, we created a Classifier class. This class identifies a given vector of flowers based on an input list of already identified Irises. This is implemented step-by-step according to the kNN algorithm, first finding the k closest neighbors to the unidentifiable flower, and then finding which category is most common among them.
+
+The output given by the classifier class is written to an output folder, in a .csv file with an appropriate name thanks to our FileConverter class, which manages this project's input-output. Currently, the file converting system is hyper-specific and not very flexible, but this should be a problem since the UI is bound to change drastically, so the current system is only temporary.
+
+```c++
+class FileConverter {
+public:
+    std::vector<Flower>& updateFromFile(std::string path);
+    void updateToFile(std::string path);
+    ...
+};
+```
 
 [1]: https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
