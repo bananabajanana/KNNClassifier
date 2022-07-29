@@ -12,12 +12,12 @@ public:
      * returns the point.
      * @return  Properties.
      */
-    const std::vector<double> getPoint();
+    const std::vector<double> getPoint() const;
     /**
      *
      * @return
      */
-    const int getN();
+    const int getN() const;
 
     /**
      * Creates a point in the coordinate system using the flower characteristics.

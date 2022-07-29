@@ -9,11 +9,11 @@ Properties::Properties(double* properties, int n)
 {
 }
 
-const std::vector<double> Properties::getPoint() {
+const std::vector<double> Properties::getPoint() const {
     return Point;
 }
 
- std::vector<double> Properties::makePoint(double* properties, int n){
+ std::vector<double> Properties::makePoint(double* properties, int n) {
     std::vector<double> temp;
     for(int i=0;i<n;i++) {
         temp.push_back(properties[i]);
@@ -21,7 +21,7 @@ const std::vector<double> Properties::getPoint() {
     return temp;
 }
 
-const int Properties::getN() {
+const int Properties::getN() const{
     return n;
 }
 
