@@ -6,6 +6,13 @@
 #include "Classifier.hpp"
 #include "DistancesData.hpp"
 
+// TODO:
+//  * Change absolute paths to relative path in main and distance classes
+//  * Simplify and clean code
+//  * Add comments
+//  * Get rid of c content (only cpp should be left)
+//  * Finish readme
+
 int main(int argc, char*argv[]) {
     FileConverter fc;
     std::vector<Flower> classified = fc.updateFromFile("C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\source\\classified.csv");
