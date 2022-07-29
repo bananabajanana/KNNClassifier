@@ -2,20 +2,24 @@
 #define FOURD_POINT_H_DEFINITION
 #include <iostream>
 #include <vector>
-
+/**
+ * Point with n dimensions in the coordinate system.
+ */
 class NPoint {
 private:
     const int n;
     const std::vector<double> Point;
 public:
+
     /**
-     * returns the point.
-     * @return  NPoint.
+     * Returns the point.
+     * @return  point.
      */
     const std::vector<double> getPoint() const;
+
     /**
-     *
-     * @return
+     * Returns the number of dimensions.
+     * @return n.
      */
     const int getN() const;
 
@@ -27,12 +31,14 @@ public:
      * @param petalLength - the petal length of the iris.
      */
     NPoint(double sepalWidth, double sepalLength, double petalWidth, double petalLength);
+
     /**
      * Creates a point in the coordinate system using the properties.
      * @param properties
      * @param n
      */
     NPoint(double* properties, int n);
+
     /**
      * Get array of n properties and makes from that a point that is a vector.
      * @param properties - the properties of a point.

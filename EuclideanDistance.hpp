@@ -2,7 +2,9 @@
 #define EUCLIDEAND_H_INCLUDED
 
 #include "DistanceCalc.hpp"
-
+/**
+ * Responsible on the function of the project used Euclidean distance.
+ */
 class EuclideanDistance : public DistanceCalc {
 public:
     /**

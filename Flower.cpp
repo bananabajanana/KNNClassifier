@@ -3,10 +3,10 @@
 void Flower::setType(typeIris iris) {
     type = iris;
 }
-typeIris Flower::getTypeOfIris() {
+typeIris Flower::getTypeOfIris() const{
     return type;
 }
-NPoint Flower::getPoint() {
+const NPoint Flower::getPoint() const{
     return character;
 }
 //מקווה שלא יתפוצץ

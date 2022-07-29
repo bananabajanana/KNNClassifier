@@ -3,13 +3,16 @@
 
 #include "NPoint.hpp"
 enum typeIris { versicolor, virginica, setosa, undifined };
-
+/**
+ * Flower object - type of iris + its Properties.
+ */
 class Flower {
 private:
     typeIris type;
     const NPoint character;
 
 public:
+
     /**
      * Set type of the iris.
      * @param iris  - the type;
@@ -20,13 +23,13 @@ public:
      * Get the NPoint in the coordinate system.
      * @return the NPoint.
      */
-    NPoint getPoint();
+    const NPoint getPoint() const;
 
     /**
      * Get the NPoint in the type of the iris.
      * @return the type.
      */
-    typeIris getTypeOfIris();
+    typeIris getTypeOfIris() const;
 
     /**
      * Creat the flower using its characteristics.

@@ -7,12 +7,12 @@ Classifier::Classifier(int k, const std::vector<Flower>& classified) :k(k) {
     }
 }
 
-void Classifier::defFlowers(std::vector<Flower>& unclassified, DistanceCalc& typeDis) {
+void Classifier::defFlowers(std::vector<Flower>& unclassified, DistanceCalc& typeDis) const{
     for(int i; i<unclassified.size();i++) {
         defFlower(unclassified[i], typeDis);
     }
 }
-void Classifier::defFlower(Flower& f, DistanceCalc& calculator) {
+void Classifier::defFlower(Flower& f, DistanceCalc& calculator) const{
     std::vector<double> distances;
     std::vector<Flower> results;
     //going to change

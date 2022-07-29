@@ -3,6 +3,9 @@
 
 #include "DistanceCalc.hpp"
 
+/**
+ * Responsible on the function of the project used Chebyshev distance.
+ */
 class ChebyshevDistance : public DistanceCalc {
     public:
     /**

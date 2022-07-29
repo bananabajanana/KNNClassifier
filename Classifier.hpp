@@ -7,16 +7,22 @@
 #include "Flower.hpp"
 #include "DistanceCalc.hpp"
 #define MAX_NUM 1.7976931348623157E+308
+
+/**
+ * Classifier defines flowers with the knn algorithm.
+ */
 class Classifier {
 private:
     const int k;
+    //michali: maybe we need to make it const
     std::vector<Flower> classified;
+
     /**
      * Define an undefined flower.
      * @param f - The flower.
      * @param typeDis - The distance method we are going to use.
      */
-    void defFlower(Flower& f, DistanceCalc& typeDis);
+    void defFlower(Flower& f, DistanceCalc& typeDis) const;
 
     /**
      * Helps the "defFlower" function algorithm finding the closest iris
@@ -24,7 +30,7 @@ private:
      * @param distances - vector of distances.
      * @return the place of the closest point.
      */
-    int whereMinInArr(std::vector<double>& distances);
+    static int whereMinInArr(std::vector<double>& distances);
 
 public:
     /**
@@ -32,7 +38,7 @@ public:
      * @param unclassified - all the unclassified flowers.
      * @param typeDis - whe distance method we use.
      */
-    void defFlowers(std::vector<Flower>& unclassified, DistanceCalc& typeDis);
+    void defFlowers(std::vector<Flower>& unclassified, DistanceCalc& typeDis) const;
 
     /**
      * Creat classifier for merging unclassified.
