@@ -8,7 +8,7 @@ public:
     /**
      *  override
      **/
-    double dist(FourDPoint p1, FourDPoint p2) override;
+    double dist(Properties p1, Properties p2) override;
     ManhattanDistance();
 };
 

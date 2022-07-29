@@ -19,8 +19,8 @@ add_executable(KNNClassifier
         main.cpp
         ManhattanDistance.cpp
         ManhattanDistance.hpp
-        FourDPoint.cpp
-        FourDPoint.hpp
+        nPoint.cpp
+        nPoint.hpp
         FileConverter.cpp
         FileConverter.hpp
         DistancesData.cpp

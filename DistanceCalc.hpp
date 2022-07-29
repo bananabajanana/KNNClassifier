@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include <cmath>
-#include "FourDPoint.hpp"
+#include "nPoint.hpp"
 
 class DistanceCalc {
 protected:
@@ -17,7 +17,7 @@ public:
      * @param p2  - point 2.
      * @return the distance.
      */
-    virtual double dist(FourDPoint p1, FourDPoint p2) = 0;
+    virtual double dist(Properties p1, Properties p2) = 0;
 
     /**
      * The file name of the using system.

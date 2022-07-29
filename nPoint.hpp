@@ -3,14 +3,14 @@
 #include <iostream>
 #include <vector>
 
-class FourDPoint {
+class Properties {
 private:
     const int n;
     const std::vector<double> Point;
 public:
     /**
      * returns the point.
-     * @return  Point.
+     * @return  Properties.
      */
     const std::vector<double> getPoint();
     /**
@@ -26,13 +26,13 @@ public:
      * @param petalWidth - the petal width of the iris.
      * @param petalLength - the petal length of the iris.
      */
-    FourDPoint(double sepalWidth, double sepalLength, double petalWidth, double petalLength);
+    Properties(double sepalWidth, double sepalLength, double petalWidth, double petalLength);
     /**
      * Creates a point in the coordinate system using the properties.
      * @param properties
      * @param n
      */
-    FourDPoint(double* properties, int n);
+    Properties(double* properties, int n);
     /**
      * Get array of n properties and makes from that a point that is a vector.
      * @param properties - the properties of a point.

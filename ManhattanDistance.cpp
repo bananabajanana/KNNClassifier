@@ -1,7 +1,7 @@
 #include "ManhattanDistance.hpp"
 
 
-double ManhattanDistance::dist(FourDPoint p1, FourDPoint p2) {
+double ManhattanDistance::dist(Properties p1, Properties p2) {
     if(p1.getN() != p2.getN()) {
         exit(1);
     }

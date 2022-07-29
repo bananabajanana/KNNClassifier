@@ -1,13 +1,13 @@
 #ifndef FLOWER_H_DEFINITION
 #define FLOWER_H_DEFINITION
 
-#include "FourDPoint.hpp"
+#include "nPoint.hpp"
 enum typeIris { versicolor, virginica, setosa, undifined };
 
 class Flower {
 private:
     typeIris type;
-    const FourDPoint character;
+    const Properties character;
 
 public:
     /**
@@ -17,13 +17,13 @@ public:
     void setType(typeIris iris);
 
     /**
-     * Get the FourDPoint in the coordinate system.
-     * @return the FourDPoint.
+     * Get the Properties in the coordinate system.
+     * @return the Properties.
      */
-    FourDPoint getPoint();
+    Properties getPoint();
 
     /**
-     * Get the FourDPoint in the type of the iris.
+     * Get the Properties in the type of the iris.
      * @return the type.
      */
     typeIris getTypeOfIris();
