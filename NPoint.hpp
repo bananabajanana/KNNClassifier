@@ -3,14 +3,14 @@
 #include <iostream>
 #include <vector>
 
-class Properties {
+class NPoint {
 private:
     const int n;
     const std::vector<double> Point;
 public:
     /**
      * returns the point.
-     * @return  Properties.
+     * @return  NPoint.
      */
     const std::vector<double> getPoint() const;
     /**
@@ -26,13 +26,13 @@ public:
      * @param petalWidth - the petal width of the iris.
      * @param petalLength - the petal length of the iris.
      */
-    Properties(double sepalWidth, double sepalLength, double petalWidth, double petalLength);
+    NPoint(double sepalWidth, double sepalLength, double petalWidth, double petalLength);
     /**
      * Creates a point in the coordinate system using the properties.
      * @param properties
      * @param n
      */
-    Properties(double* properties, int n);
+    NPoint(double* properties, int n);
     /**
      * Get array of n properties and makes from that a point that is a vector.
      * @param properties - the properties of a point.

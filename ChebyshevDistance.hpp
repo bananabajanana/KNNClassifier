@@ -8,7 +8,7 @@ class ChebyshevDistance : public DistanceCalc {
     /**
      *  override
      **/
-    double dist(Properties p1, Properties p2);
+    double dist(NPoint p1, NPoint p2);
     ChebyshevDistance();
 };
 

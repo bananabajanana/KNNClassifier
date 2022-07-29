@@ -1,6 +1,6 @@
 #include "ChebyshevDistance.hpp"
 
-double ChebyshevDistance::dist(Properties p1, Properties p2) {
+double ChebyshevDistance::dist(NPoint p1, NPoint p2) {
     if(p1.getN() != p2.getN()) {
         exit(1);
     }

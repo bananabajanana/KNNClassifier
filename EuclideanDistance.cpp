@@ -1,6 +1,6 @@
 #include "EuclideanDistance.hpp"
 
-double EuclideanDistance::dist(Properties p1, Properties p2) {
+double EuclideanDistance::dist(NPoint p1, NPoint p2) {
     if(p1.getN() != p2.getN()) {
         exit(1);
     }

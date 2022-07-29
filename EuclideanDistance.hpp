@@ -8,7 +8,7 @@ public:
     /**
      *  override
      **/
-    double dist(Properties p1, Properties p2) override;
+    double dist(NPoint p1, NPoint p2) override;
     EuclideanDistance();
 };
 
