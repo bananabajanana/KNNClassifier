@@ -1,6 +1,6 @@
 #include "EuclideanDistance.hpp"
 
-const double EuclideanDistance::dist(const NPoint p1, const NPoint p2) const {
+const double EuclideanDistance::dist(const NPoint& p1, const NPoint& p2) const {
     //points have to be of equal coordinate systems.
     if(p1.getN() != p2.getN()) {
         exit(1);

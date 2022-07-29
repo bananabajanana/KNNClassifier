@@ -17,11 +17,11 @@ public:
      * @param p2  - point 2.
      * @return the distance.
      */
-    virtual const double dist(const NPoint p1, const NPoint p2) const = 0;
+    virtual const double dist(const NPoint& p1, const NPoint& p2) const = 0;
 
     /**
      * @return the file name output for the current distance function.
      */
-    const std::string fileName() const;
+    const std::string& fileName() const;
 };
 #endif
