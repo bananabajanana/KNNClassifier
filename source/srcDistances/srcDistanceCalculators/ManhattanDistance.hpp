@@ -1,6 +1,6 @@
 #ifndef MANHATTAND_H_DEFITIONS
 #define MANHATTAND_H_DEFITIONS
-#include "DistanceCalc.hpp"
+#include "source/srcDistances/DistanceCalc.hpp"
 
 /**
  * Responsible on the function of the project used Manhattan distance.

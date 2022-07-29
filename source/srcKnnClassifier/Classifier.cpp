@@ -23,12 +23,12 @@ void Classifier::defFlower(Flower& f, DistanceCalc& calculator) const{
     for(int i=0;i<k;i++) {
         results.push_back(classified[whereMinInArr(distances)]);
     }
-    //{ versicolor, virginica, setosa}
+
     int types[] = {0,0,0};
     for(int i=0;i<k;i++) {
         types[results[i].getTypeOfIris()]++;
     }
-    //versicolor, virginica, setosa, undifined};
+
     if(types[0]==fmax(types[0],(int)fmax(types[1],types[2]))) {
         f.setType(versicolor);
     }

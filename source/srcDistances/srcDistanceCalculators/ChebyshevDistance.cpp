@@ -1,6 +1,7 @@
 #include "ChebyshevDistance.hpp"
 
 double ChebyshevDistance::dist(NPoint p1, NPoint p2) {
+    //points have to be of equal coordinate systems.
     if(p1.getN() != p2.getN()) {
         exit(1);
     }
@@ -10,6 +11,7 @@ double ChebyshevDistance::dist(NPoint p1, NPoint p2) {
     }
     return sum;
 }
+
 ChebyshevDistance::ChebyshevDistance() {
     this->FILE_NAME = "../output/chebyshev_output.csv";
 }

@@ -11,6 +11,7 @@ std::vector<Flower> &FileConverter::getContent() {
 }
 
 void FileConverter::setContent(std::vector<Flower> &newContent) {
+    // copies the given vector to current content vector.
     content.clear();
     for(Flower& flower : newContent) {
         this->content.push_back(flower);
@@ -28,23 +29,12 @@ std::vector<Flower>& FileConverter::updateFromFile(std::string path) {
     return content;
 }
 
+// not very flexible as
 void FileConverter::updateToFile(std::string path) {
+
     std::ofstream file(path);
     for (auto& flower : content) {
-        switch (flower.getTypeOfIris()) {
-            case versicolor:
-                file << "Iris-versicolor" << std::endl;
-                break;
-            case virginica:
-                file << "Iris-virginica" << std::endl;
-                break;
-            case setosa:
-                file << "Iris-setosa" << std::endl;
-                break;
-            default:
-                file << "!!Undefined!!" << std::endl;
-                break;
-        }
+        file << types[flower.getTypeOfIris()] << std::endl;
     }
 }
 
@@ -60,12 +50,14 @@ Flower& FileConverter::flowerFromLine(char *st) {
     Flower* output = new Flower(parameters[0], parameters[1], parameters[2], parameters[3]);
     if (val != nullptr) {
         std::string temp(val);
-        if (temp == "Iris-setosa") {
-            output->setType(setosa);
-        } else if (temp == "Iris-versicolor") {
-            output->setType(versicolor);
-        } else if (temp == "Iris-virginica") {
-            output->setType(virginica);
+        bool found = false;
+
+        //converts from given type to the typeIris enum
+        for (int i = 0; i < types->length() - 1; i++) {
+            if (temp == types[i]) {
+                found = true;
+                output->setType((typeIris) i);
+            }
         }
     }
     return *output;

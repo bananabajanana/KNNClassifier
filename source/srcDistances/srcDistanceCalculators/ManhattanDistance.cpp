@@ -1,7 +1,7 @@
 #include "ManhattanDistance.hpp"
 
-
 double ManhattanDistance::dist(NPoint p1, NPoint p2) {
+    //points have to be of equal coordinate systems.
     if(p1.getN() != p2.getN()) {
         exit(1);
     }
@@ -13,5 +13,5 @@ double ManhattanDistance::dist(NPoint p1, NPoint p2) {
 }
 
 ManhattanDistance::ManhattanDistance() {
-    this->FILE_NAME = "C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\input\\output\\manhattan_output.csv";
+    this->FILE_NAME = "../output/manhattan_output.csv";
 }

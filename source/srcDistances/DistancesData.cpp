@@ -1,7 +1,3 @@
-//
-// Created by ohadh on 7/28/2022.
-//
-
 #include "DistancesData.hpp"
 
 std::vector<DistanceCalc*>& DistancesData::getAllTypes() {

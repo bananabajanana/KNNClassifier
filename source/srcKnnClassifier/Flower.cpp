@@ -9,7 +9,7 @@ typeIris Flower::getTypeOfIris() const{
 const NPoint Flower::getPoint() const{
     return character;
 }
-//מקווה שלא יתפוצץ
+
 Flower::Flower(double sepalWidth, double sepalLength, double petalWidth, double petalLength, typeIris type)
     :character(sepalWidth, sepalLength, petalWidth, petalLength)
 {

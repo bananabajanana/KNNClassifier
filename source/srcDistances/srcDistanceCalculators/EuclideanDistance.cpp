@@ -1,6 +1,7 @@
 #include "EuclideanDistance.hpp"
 
 double EuclideanDistance::dist(NPoint p1, NPoint p2) {
+    //points have to be of equal coordinate systems.
     if(p1.getN() != p2.getN()) {
         exit(1);
     }
@@ -12,5 +13,5 @@ double EuclideanDistance::dist(NPoint p1, NPoint p2) {
 }
 
 EuclideanDistance::EuclideanDistance() {
-    this->FILE_NAME = "C:\\Users\\ohadh\\CLionProjects\\KNNClassifier\\output\\euclidean_output.csv";
+    this->FILE_NAME = "../output/euclidean_output.csv";
 }

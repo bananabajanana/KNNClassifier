@@ -2,16 +2,15 @@
 #define KNNCLASSIFIER_DISTANCESDATA_HPP
 
 #include "DistanceCalc.hpp"
-#include "ChebyshevDistance.hpp"
-#include "ManhattanDistance.hpp"
-#include "EuclideanDistance.hpp"
+#include "source/srcDistances/srcDistanceCalculators/ChebyshevDistance.hpp"
+#include "source/srcDistances/srcDistanceCalculators/ManhattanDistance.hpp"
+#include "source/srcDistances/srcDistanceCalculators/EuclideanDistance.hpp"
 #include "vector"
 
 class DistancesData {
 public:
     /**
-     * All the types we use to measure.
-     * @return all the types that can be used.
+     * @return a list of all distances calculators implemented.
      */
     static std::vector<DistanceCalc*>& getAllTypes();
 };

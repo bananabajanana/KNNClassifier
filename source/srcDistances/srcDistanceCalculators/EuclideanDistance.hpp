@@ -1,7 +1,7 @@
 #ifndef EUCLIDEAND_H_INCLUDED
 #define EUCLIDEAND_H_INCLUDED
 
-#include "DistanceCalc.hpp"
+#include "source/srcDistances/DistanceCalc.hpp"
 /**
  * Responsible on the function of the project used Euclidean distance.
  */

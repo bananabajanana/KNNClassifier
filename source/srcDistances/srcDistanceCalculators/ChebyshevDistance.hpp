@@ -1,7 +1,7 @@
 #ifndef CHEBYSHEV_H_INCLUDED
 #define CHEBYSHEV_H_INCLUDED
 
-#include "DistanceCalc.hpp"
+#include "source/srcDistances/DistanceCalc.hpp"
 
 /**
  * Responsible on the function of the project used Chebyshev distance.

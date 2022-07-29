@@ -12,7 +12,7 @@ protected:
 public:
 
     /**
-     * Calculate the distance between two points using different systems.
+     * Calculate the distance between two points.
      * @param p1 - point 1.
      * @param p2  - point 2.
      * @return the distance.
@@ -20,8 +20,7 @@ public:
     virtual double dist(NPoint p1, NPoint p2) = 0;
 
     /**
-     * The file name of the using system.
-     * @return the file name.
+     * @return the file name output for the current distance function.
      */
     std::string fileName();
 };
