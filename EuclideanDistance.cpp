@@ -1,8 +1,14 @@
 #include "EuclideanDistance.hpp"
 
 double EuclideanDistance::dist(FourDPoint p1, FourDPoint p2) {
-    return sqrt(pow(p1.getX() - p2.getX(), 2) + pow(p1.getY() - p2.getY(), 2)
-                + pow(p1.getZ() - p2.getZ(), 2) + pow(p1.getW() - p2.getW(), 2));
+    if(p1.getN() != p2.getN()) {
+        exit(1);
+    }
+    double sum=0;
+    for(int i=0; i<p1.getN();i++) {
+        sum+= pow(p1.getPoint()[i] - p2.getPoint()[i], 2);
+    }
+    return sqrt(sum);
 }
 
 EuclideanDistance::EuclideanDistance() {

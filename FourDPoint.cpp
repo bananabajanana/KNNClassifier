@@ -1,19 +1,27 @@
 #include "FourDPoint.hpp"
 
 FourDPoint::FourDPoint(double sepalWidth, double sepalLength, double petalWidth, double petalLength)
-    : sepalWidth(sepalWidth), sepalLength(sepalLength), petalWidth(petalWidth),petalLength(petalLength)
+        : Point({sepalWidth, sepalLength, petalWidth, petalLength}), n(4)
+{
+}
+FourDPoint::FourDPoint(double* properties, int n)
+    :n(n), Point(makePoint(properties,n))
 {
 }
 
-double FourDPoint::getX() const  {
-    return petalLength;
+const std::vector<double> FourDPoint::getPoint() {
+    return Point;
 }
-double FourDPoint::getY() const {
-    return petalWidth;
+
+ std::vector<double> FourDPoint::makePoint(double* properties, int n){
+    std::vector<double> temp;
+    for(int i=0;i<n;i++) {
+        temp.push_back(properties[i]);
+    }
+    return temp;
 }
-double FourDPoint::getZ() const {
-    return sepalLength;
+
+const int FourDPoint::getN() {
+    return n;
 }
-double FourDPoint::getW() const {
-    return sepalWidth;
-}
+

@@ -2,7 +2,14 @@
 
 
 double ManhattanDistance::dist(FourDPoint p1, FourDPoint p2) {
-    return fmax(fabs(p1.getX() - p2.getX()), fmax(fabs(p1.getY() - p2.getY()), fmax(fabs(p1.getZ() - p2.getZ()), fabs(p1.getW() - p2.getW()))));
+    if(p1.getN() != p2.getN()) {
+        exit(1);
+    }
+    double sum = 0;
+    for(int i=0; i<p1.getN();i++) {
+        sum+= fabs(p1.getPoint()[i] - p2.getPoint()[i]);
+    }
+    return sum;
 }
 
 ManhattanDistance::ManhattanDistance() {

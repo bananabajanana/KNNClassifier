@@ -1,35 +1,23 @@
 #ifndef FOURD_POINT_H_DEFINITION
 #define FOURD_POINT_H_DEFINITION
-
+#include <iostream>
+#include <vector>
 
 class FourDPoint {
 private:
-    const double petalLength, petalWidth, sepalLength, sepalWidth;
-
+    const int n;
+    const std::vector<double> Point;
 public:
     /**
-     * Get the x-coordinate in the coordinate system.
-     * @return petalLength.
+     * returns the point.
+     * @return  Point.
      */
-    double getX() const;
-
+    const std::vector<double> getPoint();
     /**
-     * Get the y-coordinate in the coordinate system.
-     * @return petalWidth.
+     *
+     * @return
      */
-    double getY() const;
-
-    /**
-     * Get the z-coordinate in the coordinate system.
-     * @return sepalLength.
-     */
-    double getZ() const;
-
-    /**
-     * Get the w-coordinate in the coordinate system.
-     * @return sepalWidth.
-     */
-    double getW() const;
+    const int getN();
 
     /**
      * Creates a point in the coordinate system using the flower characteristics.
@@ -39,6 +27,19 @@ public:
      * @param petalLength - the petal length of the iris.
      */
     FourDPoint(double sepalWidth, double sepalLength, double petalWidth, double petalLength);
+    /**
+     * Creates a point in the coordinate system using the properties.
+     * @param properties
+     * @param n
+     */
+    FourDPoint(double* properties, int n);
+    /**
+     * Get array of n properties and makes from that a point that is a vector.
+     * @param properties - the properties of a point.
+     * @param n - the number of dimensions.
+     * @return the point as vector.
+     */
+    static std::vector<double> makePoint(double* properties, int n);
 };
 
 #endif
