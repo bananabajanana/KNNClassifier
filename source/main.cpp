@@ -9,8 +9,9 @@
 // TODO:
 //  * Find out how to run finalized version from console for readme Installation+Usage.
 //  * Simplify and clean code
-//  Additional things i need to discuss with you Michali :)
-//    * making the classifier class more generic (maybe instead of working with flower specifically, should work with a "classifiable" interface? i mean, everything with a point and classes should work)
+//
+// Maybe One Day:
+//  * making the classifier class more generic (maybe instead of working with flower specifically, should work with a "classifiable" interface? i mean, everything with a point and classes should work)
 
 int main(int argc, char* argv[]) {
     //loading input files and k
