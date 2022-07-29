@@ -12,7 +12,7 @@ public:
     /**
      * @return a list of all distances calculators implemented.
      */
-    static std::vector<DistanceCalc*>& getAllTypes();
+    static const std::vector<DistanceCalc*>& getAllTypes();
 };
 
 

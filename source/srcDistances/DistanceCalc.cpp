@@ -1,5 +1,5 @@
 #include "DistanceCalc.hpp"
 
-std::string DistanceCalc::fileName() {
+const std::string DistanceCalc::fileName() const {
     return FILE_NAME;
 }

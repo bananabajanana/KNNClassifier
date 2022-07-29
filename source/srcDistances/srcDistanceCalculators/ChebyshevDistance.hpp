@@ -11,7 +11,7 @@ class ChebyshevDistance : public DistanceCalc {
     /**
      *  override
      **/
-    double dist(NPoint p1, NPoint p2);
+    const double dist(const NPoint p1, const NPoint p2) const override;
     ChebyshevDistance();
 };
 

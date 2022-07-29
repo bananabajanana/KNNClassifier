@@ -1,6 +1,6 @@
 #include "ManhattanDistance.hpp"
 
-double ManhattanDistance::dist(NPoint p1, NPoint p2) {
+const double ManhattanDistance::dist(const NPoint p1, const NPoint p2) const {
     //points have to be of equal coordinate systems.
     if(p1.getN() != p2.getN()) {
         exit(1);

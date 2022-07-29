@@ -19,13 +19,13 @@ public:
      * @param path input file.
      * @return decoded flower-vector from input file.
      */
-    std::vector<Flower>& updateFromFile(std::string path);
+    std::vector<Flower>& updateFromFile(const std::string& path);
 
     /**
      * Update the currently stored content to the given text file path
      * @param path output file.
      */
-    void updateToFile(std::string path);
+    void updateToFile(const std::string& path) const;
 
     /**
      * @return currently stored content.
@@ -36,7 +36,7 @@ public:
      * Sets the currently stored content to the input vector.
      * @param content new content to store.
      */
-    void setContent(std::vector<Flower>& content);
+    void setContent(const std::vector<Flower>& content);
 };
 
 #endif

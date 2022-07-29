@@ -10,7 +10,7 @@ public:
     /**
      *  override
      **/
-    double dist(NPoint p1, NPoint p2) override;
+    const double dist(const NPoint p1, const NPoint p2) const override;
     EuclideanDistance();
 };
 
