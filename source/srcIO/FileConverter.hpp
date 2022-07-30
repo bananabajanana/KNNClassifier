@@ -22,7 +22,7 @@ public:
     std::vector<Flower>& updateFromFile(const std::string& path);
 
     /**
-     * Update the currently stored content to the given text file path
+     * Update the currently stored content to the given text file path.
      * @param path output file.
      */
     void updateToFile(const std::string& path) const;

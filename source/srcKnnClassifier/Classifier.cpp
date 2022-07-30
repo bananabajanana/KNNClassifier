@@ -15,11 +15,11 @@ void Classifier::defFlowers(std::vector<Flower>& unclassified, DistanceCalc& typ
 void Classifier::defFlower(Flower& f, DistanceCalc& calculator) const{
     std::vector<double> distances;
     std::vector<Flower> results;
-    //going to change
+
     for(auto & i : classified) {
         distances.push_back(calculator.dist(f.getPoint(), i.getPoint()));
     }
-    //changed(my mind)
+
     for(int i=0;i<k;i++) {
         results.push_back(classified[whereMinInArr(distances)]);
     }

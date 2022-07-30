@@ -14,9 +14,6 @@
 class Classifier {
 private:
     const int k;
-    //michali: maybe we need to make it const
-    //ohadi: probably not because unclassified flowers get classified
-    //ohadi: hmm wait actually we are making copies of them when classifying so idk, maybeeeee...?
     std::vector<Flower> classified;
 
     /**

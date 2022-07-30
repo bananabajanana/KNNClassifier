@@ -6,13 +6,6 @@
 #include "source/srcKnnClassifier/Classifier.hpp"
 #include "source/srcDistances/DistancesData.hpp"
 
-// TODO:
-//  * Find out how to run finalized version from console for readme Installation+Usage.
-//  * Simplify and clean code
-//
-// Maybe One Day:
-//  * making the classifier class more generic (maybe instead of working with flower specifically, should work with a "classifiable" interface? i mean, everything with a point and classes should work)
-
 int main(int argc, char* argv[]) {
     //loading input files and k
     FileConverter fc;
