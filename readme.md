@@ -30,6 +30,24 @@ $ git clone 'https://github.com/bananabajanana/KNNClassifier.git'
 ----
 
 ## Usage
+You can run the code with our default input files, or alternatively put in your own, in the <code>input</code> folder, and the output will be found in a similar <code>output</code> folder.
+
+```
+KNNClassifier
+│   ...
+│
+└───input
+│   │   classified.csv
+│   │   unclassified.csv
+│   │   ...
+│
+└───output
+│   │   chebyshev_output.csv
+│   │   euclidean_output.csv
+│   │   manhattan_output.csv
+│   │   ...
+```
+
 <p>You can run the project using our provided <code>CMakeLists.txt</code> file:</p>
 
 ```console
