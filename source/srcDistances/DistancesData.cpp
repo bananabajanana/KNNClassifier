@@ -1,7 +1,7 @@
 #include "DistancesData.hpp"
 
 const std::vector<DistanceCalc*>& DistancesData::getAllTypes() {
-    std::vector<DistanceCalc*> *allTypes = new std::vector<DistanceCalc*>();
+    auto *allTypes = new std::vector<DistanceCalc*>();
     allTypes->push_back((DistanceCalc *)new EuclideanDistance);
     allTypes->push_back((DistanceCalc *)new ManhattanDistance);
     allTypes->push_back((DistanceCalc *)new ChebyshevDistance);

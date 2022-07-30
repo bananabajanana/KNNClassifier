@@ -1,5 +1,5 @@
 # KNN classifier
-<p><em>"In statistics, the k-nearest neighbors algorithm (k-NN) is a non-parametric supervised learning method [...] k-NN is a type of classification where the function is only approximated locally and all computation is deferred until function evaluation"</em><sup><cite>[1]</cite></sup></p>
+<em>"In statistics, the k-nearest neighbors algorithm (k-NN) is a non-parametric supervised learning method [...] k-NN is a type of classification where the function is only approximated locally and all computation is deferred until function evaluation"</em> [1]
 <p>This project is an implementation of the kNN algorithm, to estimate the type of Iris flower based on four properties:</p>
 <ul>
 <li>Sepal length</li>
@@ -15,7 +15,13 @@
 
 ## Installation
 
-<p>Clone the repository:</p>
+This project relies on CMake to generate the executable file. If you don't have CMake yet, you can download it [here](https://cmake.org/download/), or alternatively, in a Debian-based system, run
+
+```console
+$ sudo apt install cmake
+```
+
+<p>Then, once cmake is installed, clone this project's repository with:</p>
 
 ```console
 $ git clone 'https://github.com/bananabajanana/KNNClassifier.git'
@@ -27,11 +33,11 @@ $ git clone 'https://github.com/bananabajanana/KNNClassifier.git'
 <p>You can run the project using our provided <code>CMakeLists.txt</code> file:</p>
 
 ```console
+$ mkdir -p build && cd build
 $ cmake
-$ make
-$ ./KNNClassifier {k}
+$ make -j && make KNNClassifier {K}
 ```
-<p>Replacing {k} with an odd integer of your choosing.</p>
+<p>Replacing {k} with an integer of your choosing.</p>
 
 ----
 
@@ -83,5 +89,16 @@ public:
     ...
 };
 ```
+
+----
+## Authors
+
+* [Ohad Heines](https://github.com/bananabajanana)
+* [Michal Iakobashvili](https://github.com/michaliakobashvili)
+
+----
+## Acknowledgements
+
+For a better understanding of the algorithm we researched in [Wikipedia](https://www.wikipedia.org/), and used [Stack Overflow](https://stackoverflow.com/) to understand c++ syntax and debug more efficiently.
 
 [1]: https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm

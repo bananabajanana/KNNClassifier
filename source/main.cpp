@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
     FileConverter fc;
     std::vector<Flower> classified = fc.updateFromFile("../input/classified.csv");
     std::vector<Flower> unclassified = fc.updateFromFile("../input/Unclassified.csv");
-    int k = 3/*atoi(argv[0])*/;
+    int k = atoi(argv[0]);
 
     Classifier machine(k, classified);
     std::vector<DistanceCalc *> calculators = DistancesData::getAllTypes();

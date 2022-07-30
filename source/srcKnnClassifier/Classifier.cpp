@@ -8,7 +8,7 @@ Classifier::Classifier(int k, const std::vector<Flower>& classified) :k(k) {
 }
 
 void Classifier::defFlowers(std::vector<Flower>& unclassified, DistanceCalc& typeDis) const{
-    for(int i; i<unclassified.size();i++) {
+    for(int i = 0; i < unclassified.size();i++) {
         defFlower(unclassified[i], typeDis);
     }
 }
@@ -56,5 +56,6 @@ int Classifier::whereMinInArr(std::vector<double>& distances) {
             return i;
         }
     }
+    return 0;
 
 }
