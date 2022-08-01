@@ -25,6 +25,7 @@ $ sudo apt install cmake
 
 ```console
 $ git clone 'https://github.com/bananabajanana/KNNClassifier.git'
+$ cd KNNClassifier
 ```
 
 ----
