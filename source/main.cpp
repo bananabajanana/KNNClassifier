@@ -7,7 +7,7 @@
 #include "source/srcDistances/DistancesData.hpp"
 
 int main(int argc, char* argv[]) {
-    //loading input files and k
+    //loading input files and k.
     FileConverter fc;
     std::vector<Flower> classified = fc.updateFromFile("../input/classified.csv");
     std::vector<Flower> unclassified = fc.updateFromFile("../input/Unclassified.csv");
