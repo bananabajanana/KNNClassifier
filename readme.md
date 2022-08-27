@@ -53,8 +53,9 @@ KNNClassifier
 
 ```console
 $ mkdir -p build && cd build
-$ cmake
+$ cmake ..
 $ make -j && make KNNClassifier {K}
+$ ./KNNClassifier
 ```
 <p>Replacing {k} with an integer of your choosing.</p>
 
